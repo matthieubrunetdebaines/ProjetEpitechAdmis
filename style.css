@@ -1,0 +1,184 @@
+@font-face {
+    font-family: "spaced";
+    src: url(assets/Spaced\ OTF.otf);
+}
+
+@font-face {
+    font-family: "starwars";
+    src: url(assets/Death\ Star.otf);
+}
+
+@font-face {
+    font-family: "montserrat";
+    src: url(assets/Montserrat-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+a{
+    color:rgb(255, 255, 255)
+}
+
+/* PREMIERE PAGE */
+
+.content_1{
+    background: url(assets/backgrounds/galaxie_rotative.jpg) fixed no-repeat center/cover;
+    color: white;
+    font-family: "montserrat";
+}
+
+.icon{
+    width: 50px;
+    z-index: 100;
+}
+
+.icon:hover{
+    cursor: pointer;
+}
+
+.content_1 h1{
+    font-family: "starwars";
+    font-size: 2.5rem;
+        text-shadow: 0 0 15px rgb(0, 119, 255);
+}
+
+
+/* HEADER */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    padding: 10vh 10% 0 10%;
+}
+
+.ul_navbar{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 8vh;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-left: -100%;
+    transition: 0.4s ease;
+    /* backdrop-filter: blur(7px); */
+}
+
+nav li a:hover{
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.738);
+}
+
+.mobile_menu{
+    margin-left: 0;
+}
+
+@media screen and (min-width: 1100px) {
+    .ul_navbar{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: baseline;
+        font-size: 1rem;
+        width: 65%;
+        padding-top: 10vh;
+        position: absolute;
+        left: 65%;
+        top: 0%;
+        backdrop-filter: none;
+        margin-left: 0;
+    }
+    .icon{
+        display: none;
+    }
+}
+
+
+/* MAIN PAGE 1 */
+
+.main_page1{
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    text-shadow: 0 0 10px rgb(0, 119, 255);
+}
+
+.content_1 h2{
+    font-family: "spaced";
+    font-size: 3rem;
+    height: 100vh ;
+    padding-top: 100vh;
+    text-shadow: 0 0 7px rgb(0, 119, 255);
+}
+
+marquee{
+    text-align: justify;
+    margin: 20vh 0 0 0;
+    border-radius: 5px 5px 0 0 ;
+    height: 300px;
+    width: 200px;
+}
+
+.marquee{
+    display: none;
+}
+
+@media screen and (min-width: 1100px) {
+    .content_1{
+        height: 100vh;
+    }
+    .content_1 h2{
+        padding-top: 30vh;
+        height: 50vh;
+    }
+    marquee{
+        display: none;
+    }
+    p.marquee{
+        display: inline-block;
+    }
+}
+
+/* FOOTER PAGE 1 */
+
+#footer{
+    margin-top: 15vh;
+}
+
+#mentions ul, #social ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 0.65rem;
+    width: 100%;
+    text-align: center;
+}
+
+#mentions{
+    width: 90%;
+    margin: auto;
+}
+
+#social{
+    padding: 5vh 0;
+    width: 90%;
+    margin: auto;
+}
+
+@media screen and (min-width: 1100px) {
+    #footer{
+        margin-top: 25vh;
+    }
+}
