@@ -289,68 +289,36 @@ height: 100%;
 /* Je vais tenter de faire apparaitre le nom de la planete e la navbar lorsqu'on la survole mais sans utiliser de JS */
 
 .survolnom{
-    display: inline-block;
-    position: absolute;
-    color: white;
-    font-family: "starwars";
-    font-size: 1.2rem;
-    text-shadow: 0 0 20px blue;
-    transition: 1.1s ease;
-    opacity: 0;
     /* background-color: aliceblue; */
     /* width: 130px; */
     text-align: right;
     border-radius: 0 0 30px 30px;
 }
 
-#nameneptune:hover, #nameuranus:hover, #namesaturne:hover, #namejupiter:hover, #namemars:hover, #nameterre:hover, #namevenus:hover, #namemercure:hover{
+.survolnom2{
+    display: inline-block;
+    color: white;
+    font-family: "starwars";
+    font-size: 1.2rem;
+    text-shadow: 0 0 20px blue;
+    transition: 1.1s ease;
+    opacity: 0;
+}
+
+#a_mercure, #a_venus, #a_terre, #a_mars, #a_jupiter,
+#a_saturne, #a_uranus, #a_neptune{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#a_mercure:hover p, #a_venus:hover p, #a_terre:hover p,
+#a_mars:hover p, #a_jupiter:hover p,  #a_saturne:hover p,
+#a_uranus:hover p, #a_neptune:hover p {
     opacity: 1;
 }
 
-#nameneptune{
-    left: 10px;
-    top: 4.6%; 
-    height: 8vh;
-}
-
-#nameuranus{
-    left: 9px;
-    top: 18%;
-    height: 6vh;
-}
-
-#namesaturne{
-    left: 9px;
-    top: 30.2%;
-    height: 5vh;
-}
-
-#namejupiter{
-    left: 9px;
-    top: 41%;
-    height: 7vh;
-}
-
-#namemars{
-    left: 13px;
-    top: 53.2%;
-    height: 6.5vh;
-}
-
-#nameterre{
-    left: 13px;
-    top: 64.8%;
-    height: 7.2vh;
-}
-
-#namevenus{
-    left: 13px;
-    top: 77.4%;
-    height: 7.2vh; 
-}
-
-#namemercure{
-    left: 13px;
-    top: 89.4%;
-    height: 7.2vh;
+#nameneptune:hover, #nameuranus:hover, #namesaturne:hover,
+#namejupiter:hover, #namemars:hover, #nameterre:hover,
+#namevenus:hover, #namemercure:hover{
+    opacity: 1;
 }
