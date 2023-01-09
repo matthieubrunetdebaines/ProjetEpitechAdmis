@@ -78,7 +78,14 @@ a{
 }
 
 nav li a:hover{
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.738);
+    text-shadow: 0 0 20px blue;
+    box-shadow: 0 0 20px blue;
+    border-radius: 15px;
+    padding: 5px 10px;
+    background-color: white;
+    color: blue;
+    font-weight: bold;
+    transition: 0.4s;
 }
 
 .mobile_menu{

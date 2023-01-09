@@ -13,12 +13,34 @@
     src: url(assets/Montserrat-VariableFont_wght.ttf);
 }
 
+@keyframes opaque {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes opaque_gauche {
+    from{
+        opacity: 0;
+        margin-left: -100%;
+    }
+    to{
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
     list-style: none;
+    scroll-behavior: smooth;
+
 }
 
 header{
@@ -35,6 +57,8 @@ header{
     width: 100%;
     align-items: center;
     height: 10vh;
+    /* z-index: 10; */
+    animation: opaque 2s;
 }
 
 .navbar a{
@@ -59,6 +83,21 @@ header{
     grid-template-rows: repeat(2,1fr);
     padding-left: 10%;
     line-height: 5vh;
+}
+
+.navbar .nav_links ul li a{
+    transition: all 0.4s ease-in-out;
+}
+
+.navbar .nav_links ul li a:hover{
+    text-shadow: 0 0 20px blue;
+    box-shadow: 0 0 20px blue;
+    border-radius: 15px;
+    padding: 5px 10px;
+    background-color: white;
+    color: blue;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 @media screen and (min-width: 1146px) {
@@ -144,6 +183,7 @@ main{
     padding: 10vh 20% 10vh 15%;
     padding: none;
     width: 100%;
+    animation: opaque 2s;
 }
 
 @media screen and (min-width : 1420px) {
@@ -250,6 +290,11 @@ main{
     width: 50px;
 }
 
+.icon_planete_system:hover{
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
 .nav_planete{
 margin: auto;
 position: fixed;
@@ -257,6 +302,7 @@ background: url(assets/backgrounds/galaxie_rotative.jpg) fixed no-repeat center/
 left: 0;
 padding: 4vh 1% 0 1%;
 height: 100%;
+animation: opaque_gauche 1s;
 }
 
 .nav_planete ul{
@@ -264,6 +310,7 @@ height: 100%;
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
+    padding-bottom: 20px;
     /* position: relative; */
 }
 
@@ -291,8 +338,8 @@ height: 100%;
 .survolnom{
     /* background-color: aliceblue; */
     /* width: 130px; */
-    text-align: right;
-    border-radius: 0 0 30px 30px;
+    /* text-align: right;
+    border-radius: 0 0 30px 30px; */
 }
 
 .survolnom2{
@@ -317,8 +364,102 @@ height: 100%;
     opacity: 1;
 }
 
-#nameneptune:hover, #nameuranus:hover, #namesaturne:hover,
+/* #nameneptune:hover, #nameuranus:hover, #namesaturne:hover,
 #namejupiter:hover, #namemars:hover, #nameterre:hover,
 #namevenus:hover, #namemercure:hover{
     opacity: 1;
+} */
+
+/* VISITER LE PLANETARIUM */
+
+#visit_planetarium{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 20vh;
+    animation: opaque 3s;
+}
+
+#visit_planetarium p:hover{
+    /* background-color: rgba(255, 255, 255, 0.789); */
+    border-radius: 50px;
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
+    /* box-shadow: 0 0 20px blue; */
+    /* transform: rotate(1deg); */
+    font-weight: bold;
+}
+
+#visit_planetarium p{
+    color: white;
+    font-family: "spaced";
+    font-size: 3rem;
+    margin: 0 5%;
+    text-shadow: 0 0 20px blue;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.icon_fleche{
+    height: 70px;
+}
+
+
+/* ATTENTION  */
+/* FLOTTE INTERNATIONNALE */
+/* WARNING */
+
+#flotte_spatiale{
+    min-height: 90vh;
+}
+
+.icon_flotte{
+    width: 65px;
+}
+
+.pic_flotte {
+    width: 19vw;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.221);
+}
+
+.ensemble_station{
+    height: 100vh;
+}
+
+.ensemble_station h2{
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "starwars";
+    font-size: 2rem;
+    padding-top: 6vh;
+}
+
+.station_spatiale, #station_spatiale{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+    height: 80vh;
+    padding-bottom: 10vh;
+}
+
+.figcaption_flotte{
+    font-family: "montserrat";
+    text-align: center;
+    padding: 3vh 0;
+    font-size: 1.2rem;
+    white-space: normal;
+    width: 100%;
+}
+
+.figure_flotte p{
+    display: none;
 }
