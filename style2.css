@@ -497,6 +497,10 @@ animation: opaque_gauche 1s;
 
 /* CARTE DE L'UNIVERS */
 
+.iframe_map{
+    animation: opaque 2s;
+}
+
 #main_map{
     height: 100vh;
 }
@@ -509,6 +513,9 @@ iframe{
     left: 50%;
     transform: translateX(-50%);
     top: 20%;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.582);
 }
 
 .icon_takeoff{
@@ -522,7 +529,7 @@ iframe{
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
-    transition: 1.5s;
+    transition: 2s;
 }
 
 .icon_takeoff :hover{
