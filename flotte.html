@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style2.css" />
+    <script style="text/javascript" src="app2.js" async></script>
     <title>Flotte internationnale</title>
   </head>
   <body>
@@ -16,7 +17,7 @@
                       <a href="index.html">Galaxy</a>
                   </li> -->
           <li>
-            <a href="#">Carte de l'univers</a>
+            <a href="carte.html">Carte de l'univers</a>
           </li>
           <li>
             <a href="#">Conquête spaciale</a>
@@ -70,7 +71,7 @@
             </a>
           </li>
           <li>
-            <a href="#jupiter" id="a_jupiter">
+            <a href="#cargo" id="a_jupiter">
               <img
                 src="assets/flotte/cargo/faucon-removebg-preview (1).png"
                 alt="cargo"
@@ -91,7 +92,7 @@
         <div class="ensemble_station" id="stations">
           <h2>Stations spatiales</h2>
 
-          <div id="station_spatiale">
+          <div class="station_spatiale" id="flotte_spatiale">
             <!-- ISS -->
 
             <figure class="figure_flotte">
@@ -99,11 +100,11 @@
                 Station spatiale internationnale
               </figcaption>
               <img
-                src="assets/flotte/stations/ISS.jpg"
-                alt="ISS"
-                class="pic_flotte"
+              src="assets/flotte/stations/ISS.jpg"
+              alt="ISS"
+              class="pic_flotte"
               />
-              <p>
+              <p class="ps">
                 La Station spatiale internationale, en abrégé SSIou ISS, est une
                 station spatiale placée en orbite terrestre basse, occupée en
                 permanence par un équipage international qui se consacre à la
@@ -124,7 +125,7 @@
                 alt="MIR"
                 class="pic_flotte"
               />
-              <p>
+              <p class="ps">
                 Mir (du russe : Мир signifiant « Paix » et « Monde ») était une
                 station spatiale russe placée en orbite terrestre basse par
                 l'Union soviétique. Mise en orbite le 19 février 1986 et
@@ -152,7 +153,7 @@
                 alt="SSC"
                 class="pic_flotte"
               />
-              <p>
+              <p class="ps">
                 La station spatiale chinoise est une station spatiale d'une
                 soixantaine de tonnes de la république populaire de Chine
                 comportant trois modules dont l'assemblage a été terminé le 1er
@@ -187,7 +188,7 @@
                 alt="crew_dragon"
                 class="pic_flotte"
               />
-              <p>
+              <p class="ps">
                 Le Crew Dragon (ou SpaceX Dragon 2) est un véhicule spatial
                 développé par la société SpaceX pour le compte de l'agence
                 spatiale américaine, la NASA, qui assure depuis 2020 la relève
@@ -211,7 +212,7 @@
                 alt="APOLLO"
                 class="pic_flotte"
               />
-              <p>
+              <p class="ps">
                 Le programme Apollo est le programme spatial de la NASA mené
                 durant la période 1961 – 1972, qui a permis aux États-Unis
                 d'envoyer pour la première fois des hommes sur la Lune. Il est
@@ -243,7 +244,7 @@
                 alt="Vostok"
                 class="pic_flotte"
               />
-              <p>
+              <p class="ps">
                 Vostok est le premier type de vaisseau spatial habité développé
                 par l'Union soviétique dans le cadre du programme du même nom.
                 Testé à cinq reprises entre mai 1960 et mars 1961, il a été
@@ -273,14 +274,14 @@
 
             <figure class="figure_flotte">
               <figcaption class="figcaption_flotte">
-                Navette sptiale américaines
+                Navette spatiale américaine
               </figcaption>
               <img
                 src="assets/flotte/navettes/navette spatiale americaine.jpg"
                 alt="nsa"
                 class="pic_flotte"
               />
-              <p>
+              <p class="ps">
                 La navette spatiale américaine est un type de véhicule spatial
                 conçu et utilisé par l'agence spatiale américaine (NASA), dont
                 le vol inaugural remonte au 12 avril 1981 et qui est retiré du
@@ -308,7 +309,7 @@
                 alt="Bourane"
                 class="pic_flotte"
               />
-              <p>
+              <p class="ps">
                 Le programme de vaisseau spatial réutilisable soviétique
                 Bourane, Buran selon la transcription anglaise (« Бура́н »
                 signifie « tempête de neige » en russe), a été lancé en 1976 en
@@ -324,6 +325,84 @@
           </div>
         </div>
       </div>
+
+<!-- CARGOS SPATIAUX -->
+        <!-- !!! -->
+
+        <div class="ensemble_station" id="cargo">
+          <h2>Cargos spatiaux</h2>
+
+          <div class="station_spatiale">
+            <!-- SpaceX Dragon -->
+
+            <figure class="figure_flotte">
+              <figcaption class="figcaption_flotte">
+                SpaceX Dragon
+              </figcaption>
+              <img
+                src="assets/flotte/cargo/Dragon Cargo.jpg"
+                alt="dragon"
+                class="pic_flotte"
+              />
+              <p class="ps">
+                SpaceX Dragon, ou juste Dragon, est un vaisseau cargo spatial développé par la société SpaceX pour le compte
+                de la NASA qui assure conjointement avec les vaisseaux Cygnus, ATV, HTV et Progress le ravitaillement de la
+                Station spatiale internationale à la suite du retrait de la navette spatiale américaine. Il peut placer en orbite 
+                jusqu'à 6 tonnes de fret qui peuvent être réparties entre la partie pressurisée et un compartiment non pressurisé.
+                Il est conçu pour revenir sur Terre en ramenant dans la version cargo jusqu'à 3 tonnes de fret. L'amarrage à la
+                station se fait par une écoutille de grande taille au format Common Berthing Mechanism et est réalisé par
+                l'opérateur situé dans la station qui utilise le bras Canadarm 2. Depuis la fin du programme de la navette
+                spatiale américaine, dont le dernier vol a eu lieu le 1er juin 2011, le vaisseau cargo Dragon est le seul
+                engin pouvant rapporter une quantité significative de fret au sol. Le cargo spatial sert de base pour le
+                vaisseau Dragon V2 qui sera chargé de la relève des équipages de la station spatiale après 2020.
+              </p>
+            </figure>
+
+            <!-- Cygnus -->
+
+            <figure class="figure_flotte">
+              <figcaption class="figcaption_flotte">Cygnus</figcaption>
+              <img
+                src="assets/flotte/cargo/cygnus.jpg"
+                alt="cygnus"
+                class="pic_flotte"
+              />
+              <p class="ps">
+                Cygnus est un vaisseau cargo spatial développé par la société Orbital Sciences (aujourd'hui Northrop Grumman
+                Innovation Systems) dans le cadre du programme COTS de la NASA. Il doit contribuer au ravitaillement en fret
+                (nourriture, gaz, carburant, pièces détachées) de la Station spatiale internationale après le retrait de la
+                navette spatiale américaine. Il permet de transporter une masse de 2 tonnes dans sa soute pressurisée 
+                (2,7 tonnes dans une version évoluée) et est mis en orbite par le lanceur Antares développé spécifiquement
+                par le même constructeur. Le premier vol de qualification a eu lieu le 18 septembre 2013. La NASA a passé 
+                commande de 8 vols destinés à transporter 20 tonnes de fret jusqu'à la Station spatiale internationale.
+              </p>
+            </figure>
+
+            <!-- Véhicule automatique de transfert européen -->
+
+            <figure class="figure_flotte" id="last_fig">
+              <figcaption class="figcaption_flotte">ATV</figcaption>
+              <img
+                src="assets/flotte/cargo/ATV.jpg"
+                alt="atv"
+                class="pic_flotte"
+              />
+              <p class="ps">
+                Le véhicule automatique de transfert européen, ou ATV (en anglais : Automated Transfer Vehicle), est 
+                un vaisseau cargo spatial développé par l'Agence spatiale européenne pour ravitailler la Station 
+                spatiale internationale (ISS). Capable de s'amarrer automatiquement à la station comme les vaisseaux 
+                russes Progress-M, ce vaisseau cargo peut transporter environ 7,7 tonnes de fret. Il a la capacité de 
+                ravitailler la station en consommables, de transporter les pièces de rechange destinées à l'intérieur 
+                de la station lorsqu'elles sont compatibles avec le gabarit des écoutilles russes. Ses propulseurs et 
+                la réserve de carburant dont il dispose lui permettent de rehausser l'orbite de la station dégradée 
+                par la traînée de l'atmosphère résiduelle.
+              </p>
+            </figure>
+
+          </div>
+        </div>
+      </div>
+
     </main>
   </body>
 </html>

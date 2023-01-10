@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <script type="text/javascript" src="app3.js" async></script>
+    <title>Carte de l'univers</title>
+  </head>
+  <body>
+
+    <a href="#main_map" id="visit_planetarium" class="show_map" onclick="afficher()">
+      <p>Afficher la carte</p>
+    </a>
+    
+    <nav class="navbar">
+      <a href="index.html" class="logo">Galaxy</a>
+      <div class="nav_links">
+        <ul>
+          <li>
+            <a href="planetarium.html">Planetarium</a>
+          </li>
+          <li>
+            <a href="#">Conquête spaciale</a>
+          </li>
+          <li>
+            <a href="flotte.html">Flotte internationnale</a>
+          </li>
+          <li>
+            <a href="#">Humilité</a>
+          </li>
+        </ul>
+      </div>
+      <img
+        src="assets/icon/fusee-removebg-preview.png"
+        alt="menu_burger"
+        class="menu_burger"
+      />
+    </nav>
+
+    <header>
+
+      <div class="iframe_map" style="visibility:hidden;">
+        <div class="icon_takeoff" onclick="decollage()">
+          <p>Fermer et décoller</p>
+          <img src="assets/icon/battleship-removebg-preview (1).png" alt="takeoff" width="40px">
+        </div>
+          <iframe src="https://starwarsgalaxy.co" allow="fullscreen" loading="eager"> </iframe>
+      </div>
+
+    </header>
+
+  </body>
+</html>

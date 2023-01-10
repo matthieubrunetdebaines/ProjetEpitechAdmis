@@ -121,11 +121,7 @@ header{
 } 
 
 @media screen and (max-width: 754px) {
-    .navbar{
-        /* padding: 0; */
-    }
     .nav_links{
-        /* background-color: rgba(255, 255, 255, 0.31); */
         width: 100%;
         height: 100vh;
         position: absolute;
@@ -234,8 +230,6 @@ main{
 
 .info{
     font-weight: bold;
-    /* text-align: right; */
-    /* padding: 10px 0 0 0; */
 }
 
 @media screen and (max-width: 1420px) {
@@ -243,7 +237,6 @@ main{
     .figure_planete{
         display: flex;
         flex-direction: column;
-        /* height: 130vh; */
         padding: 0;
     }
     .nom_planete{
@@ -266,9 +259,6 @@ main{
 }
 
 @media screen and (max-width: 960px) {
-    /* .figure_planete{
-        height: 150vh;
-    } */
     .info_planete table{
         font-size: 0.95rem;
         border-collapse: collapse;
@@ -311,7 +301,6 @@ animation: opaque_gauche 1s;
     justify-content: space-around;
     height: 100%;
     padding-bottom: 20px;
-    /* position: relative; */
 }
 
 .nav_planete ul li{
@@ -335,13 +324,6 @@ animation: opaque_gauche 1s;
 /* MISE EN PLACE NOM PLANETE AU SURVOL */
 /* Je vais tenter de faire apparaitre le nom de la planete e la navbar lorsqu'on la survole mais sans utiliser de JS */
 
-.survolnom{
-    /* background-color: aliceblue; */
-    /* width: 130px; */
-    /* text-align: right;
-    border-radius: 0 0 30px 30px; */
-}
-
 .survolnom2{
     display: inline-block;
     color: white;
@@ -364,12 +346,6 @@ animation: opaque_gauche 1s;
     opacity: 1;
 }
 
-/* #nameneptune:hover, #nameuranus:hover, #namesaturne:hover,
-#namejupiter:hover, #namemars:hover, #nameterre:hover,
-#namevenus:hover, #namemercure:hover{
-    opacity: 1;
-} */
-
 /* VISITER LE PLANETARIUM */
 
 #visit_planetarium{
@@ -384,12 +360,9 @@ animation: opaque_gauche 1s;
 }
 
 #visit_planetarium p:hover{
-    /* background-color: rgba(255, 255, 255, 0.789); */
     border-radius: 50px;
     padding: 5px 10px;
     color: rgb(255, 255, 255);
-    /* box-shadow: 0 0 20px blue; */
-    /* transform: rotate(1deg); */
     font-weight: bold;
 }
 
@@ -427,7 +400,9 @@ animation: opaque_gauche 1s;
 }
 
 .ensemble_station{
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .ensemble_station h2{
@@ -440,7 +415,7 @@ animation: opaque_gauche 1s;
     padding-top: 6vh;
 }
 
-.station_spatiale, #station_spatiale{
+.station_spatiale{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -460,6 +435,100 @@ animation: opaque_gauche 1s;
     width: 100%;
 }
 
-.figure_flotte p{
+
+.ps{
+    position: fixed;
+    left: 50%;
+    bottom: 5%;
+    width: 80%;
+    min-height: 200px;
+    font-family: "montserrat";
+    z-index: 1000;
+    color: white;
+    font-size: 1.1rem;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: justify;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.575);
     display: none;
+    animation: opaque 1s;
+}
+
+.figure_flotte:hover .ps {
+    display: block;
+    z-index: 2000;
+}
+
+.figure_flotte p{
+    /* display: none; */
+}
+
+.pic_flotte:hover{
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.719);
+}
+
+@media screen and (max-width: 1580px) {
+    .station_spatiale{
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+    .pic_flotte{
+        width: 250px;
+    }
+    #last_fig{
+        padding-bottom: 100px;
+    }
+    .figure_flotte{
+        text-align: center;
+    }
+    .ensemble_station h2{
+        /* padding-top: 20px; */
+    }
+    #flotte_spatiale{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* CARTE DE L'UNIVERS */
+
+#main_map{
+    height: 100vh;
+}
+
+iframe{
+    height: 60vh;
+    width: 70vw;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+}
+
+.icon_takeoff{
+    position: absolute;
+    top: 20%;
+    left: 86%;
+    color: white;
+    font-family: "montserrat";
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    transition: 1.5s;
+}
+
+.icon_takeoff :hover{
+    cursor: pointer;
+}
+
+.icon_takeoff img{
+    margin-top: 5px;
 }
